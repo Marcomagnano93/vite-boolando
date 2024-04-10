@@ -3,7 +3,9 @@
 </script>
 
 <template>
+<!-- section header -->
 
+<!-- section cards -->
 </template>
 
 <style lang="scss">
