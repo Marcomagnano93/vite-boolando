@@ -11,7 +11,7 @@
                 </ul>
 
                 <div class="col-4 flx-center">
-                    <a href="#"><img class="logo" src="../assets/img/boolean-logo.png" alt=""></a>   
+                    <a href="#"><img class="logo" src="../../public/boolean-logo.png" alt=""></a>   
                 </div>
 
                 <ul class="col-4 link-list">
