@@ -2,8 +2,50 @@
 export default {
   data() {
     return {
-      cards: 6,
-      img: ["../assets/img/1.webp", "../assets/img/2.webp", "../assets/img/3.webp", "../assets/img/4.webp", "../assets/img/5.webp", "../assets/img/6.webp"],
+      cards: [
+        {
+            img: "../../public/1.webp",
+            imgHover: "../../public/1b.webp",
+            discount50: true,
+            discount30: true,
+            sostenible: true
+        },
+        {
+            img: "../../public/2.webp",
+            imgHover: "../../public/2b.webp",
+            discount50: true,
+            discount30: true,
+            sostenible: true
+        },
+        {
+            img: "../../public/3.webp",
+            imgHover: "../../public/3b.webp",
+            discount50: true,
+            discount30: true,
+            sostenible: true
+        },
+        {
+            img: "../../public/4.webp",
+            imgHover: "../../public/4b.webp",
+            discount50: true,
+            discount30: true,
+            sostenible: true
+        },
+        {
+            img: "../../public/5.webp",
+            imgHover: "../../public/5b.webp",
+            discount50: true,
+            discount30: true,
+            sostenible: true
+        },
+        {
+            img: "../../public/6.webp",
+            imgHover: "../../public/6b.webp",
+            discount50: true,
+            discount30: true,
+            sostenible: true,
+        },
+      ],
     }
   }
 }
@@ -20,10 +62,10 @@ export default {
                     <div class="card__product">
                         <div>
                             
-                            <img  src="../assets/img/1.webp" alt="">
+                            <img :src="card.img" alt="">
 
                             <div class="hover">
-                                <img src="../assets/img/1b.webp" alt="">
+                                <img :src="card.imgHover" alt="">
 
                             </div>
 
@@ -32,17 +74,8 @@ export default {
 
                         <div class="like"><a href="">&hearts;</a></div>
 
-                            <!-- QUI DOVEVI UTILIZZARE UNA LISTA DI BADGE,
-                                COSI DA RENDERE PIU SEMPLICE GESTIR GLI ELEMENTI 
-                                QUANDO CE NE PRESENTE UNO SOLO O NESSUNO 
-                                <ul class="badge__list">    ul{ dislpay: flex;}
-                                    <li class="discount">-50%</>
-                                    <li class="sostenibile">Sostenibile</li>
-                                </ul>
-                             -->
-
-                        <div class="discount">-50%</div>
-                        <div class="sostenibile">Sostenibile</div>
+                        <div class="badge discount">-50%</div>
+                        <div class="badge sostenibile">Sostenibile</div>
 
                             <div class="card__caption">
                                 <p class="caption">Levi's</p>
@@ -51,7 +84,6 @@ export default {
                                         <div class="card__price">
                                             <span class="red__price">14,99&euro;</span>
                                             <span class="black__price">29,99&euro;</span>
-                                            <!-- QUI potevi utilizzare come SELETTORI :first-child :nth-child(2), NON 2 classi -->
                                         </div>
                                 </div>
                             </div>
