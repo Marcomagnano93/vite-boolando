@@ -6,44 +6,50 @@ export default {
         {
             img: "../../public/1.webp",
             imgHover: "../../public/1b.webp",
-            discount50: true,
-            discount30: true,
-            sostenible: true
+            discounted: true,
+            discount: 50,
+            sostenible: true,
+            sostenibleOnly: false
         },
         {
             img: "../../public/2.webp",
             imgHover: "../../public/2b.webp",
-            discount50: true,
-            discount30: true,
-            sostenible: true
+            discounted: true,
+            discount: 30,
+            sostenible: false,
+            sostenibleOnly: false
         },
         {
             img: "../../public/3.webp",
             imgHover: "../../public/3b.webp",
-            discount50: true,
-            discount30: true,
-            sostenible: true
+            discounted: true,
+            discount: 30,
+            sostenible: false,
+            sostenibleOnly: false
         },
         {
             img: "../../public/4.webp",
             imgHover: "../../public/4b.webp",
-            discount50: true,
-            discount30: true,
-            sostenible: true
+            discounted: true,
+            discount: 50,
+            sostenible: true,
+            sostenibleOnly: false
         },
         {
             img: "../../public/5.webp",
             imgHover: "../../public/5b.webp",
-            discount50: true,
-            discount30: true,
-            sostenible: true
+            discounted: false,
+            discount: 50,
+            sostenible: false,
+            sostenibleOnly: false
         },
         {
             img: "../../public/6.webp",
             imgHover: "../../public/6b.webp",
-            discount50: true,
-            discount30: true,
-            sostenible: true,
+            discounted: false,
+            discount: 50,
+            sostenible: false,
+            sostenibleOnly: true
         },
       ],
     }
@@ -54,7 +60,7 @@ export default {
 <template>
     <section>
         <div class="container">
-            <div class="row cap-16">
+            <div class="row">
                 <div class="col-4"
                 v-for="(card, i) in cards"
                 >
@@ -74,8 +80,29 @@ export default {
 
                         <div class="like"><a href="">&hearts;</a></div>
 
-                        <div class="badge discount">-50%</div>
-                        <div class="badge sostenibile">Sostenibile</div>
+                        <div 
+                        v-if="card.discounted === true"
+                        class="badge discount"
+                        >
+                        
+                            {{ card.discount }}
+                        
+                        </div>
+
+                        <div 
+                        v-if="card.sostenible === true"
+                        class="badge sostenibile">
+                                Sostenibile
+                        </div>
+
+                        <div 
+                        v-if="card.sostenibleOnly === true"
+                        class="badge sostenibile__only">
+                            
+                            Sostenibile
+
+
+                        </div>
 
                             <div class="card__caption">
                                 <p class="caption">Levi's</p>
