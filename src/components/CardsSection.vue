@@ -9,7 +9,9 @@ export default {
             discounted: true,
             discount: 50,
             sostenible: true,
-            sostenibleOnly: false
+            sostenibleOnly: false,
+            brand: "Levi's",
+            cardTitle: "Relaxed fit tee unisex"
         },
         {
             img: "../../public/2.webp",
@@ -17,7 +19,9 @@ export default {
             discounted: true,
             discount: 30,
             sostenible: false,
-            sostenibleOnly: false
+            sostenibleOnly: false,
+            brand: 'Guess',
+            cardTitle: "Roses Tee"
         },
         {
             img: "../../public/3.webp",
@@ -25,7 +29,9 @@ export default {
             discounted: true,
             discount: 30,
             sostenible: false,
-            sostenibleOnly: false
+            sostenibleOnly: false,
+            brand: 'Come zucchero filato',
+            cardTitle: "Voglia di colori pastello"
         },
         {
             img: "../../public/4.webp",
@@ -33,7 +39,9 @@ export default {
             discounted: true,
             discount: 50,
             sostenible: true,
-            sostenibleOnly: false
+            sostenibleOnly: false,
+            brand: "Levi's",
+            cardTitle: "Tee unisex"
         },
         {
             img: "../../public/5.webp",
@@ -41,7 +49,9 @@ export default {
             discounted: false,
             discount: 50,
             sostenible: false,
-            sostenibleOnly: false
+            sostenibleOnly: false,
+            brand: 'Maya Deluxe',
+            cardTitle: "Stripe Bodice"
         },
         {
             img: "../../public/6.webp",
@@ -49,7 +59,9 @@ export default {
             discounted: false,
             discount: 50,
             sostenible: false,
-            sostenibleOnly: true
+            sostenibleOnly: true,
+            brand: 'Esprit',
+            cardTitle: "Maglione - Black"
         },
       ],
     }
@@ -66,15 +78,12 @@ export default {
                 >
                    <div class="card">
                     <div class="card__product">
-                        <div>
-                            
+                        <div>  
                             <img :src="card.img" alt="">
 
                             <div class="hover">
                                 <img :src="card.imgHover" alt="">
-
                             </div>
-
                         </div>
                         
 
@@ -84,9 +93,7 @@ export default {
                         v-if="card.discounted === true"
                         class="badge discount"
                         >
-                        
                             {{ card.discount }}
-                        
                         </div>
 
                         <div 
@@ -97,17 +104,14 @@ export default {
 
                         <div 
                         v-if="card.sostenibleOnly === true"
-                        class="badge sostenibile__only">
-                            
+                        class="badge sostenibile__only">                     
                             Sostenibile
-
-
                         </div>
 
                             <div class="card__caption">
-                                <p class="caption">Levi's</p>
+                                <p class="caption"> {{ card.brand }} </p>
                                 <div class="card__header">
-                                    <h2>Relaxed fit tee unisex</h2>
+                                    <h2> {{ card.cardTitle }} </h2>
                                         <div class="card__price">
                                             <span class="red__price">14,99&euro;</span>
                                             <span class="black__price">29,99&euro;</span>
