@@ -11,7 +11,10 @@ export default {
             sostenible: true,
             sostenibleOnly: false,
             brand: "Levi's",
-            cardTitle: "Relaxed fit tee unisex"
+            cardTitle: "Relaxed fit tee unisex",
+            normalPrice: 29.99,
+            discountedPrice: 14.99,
+            price: ""
         },
         {
             img: "../../public/2.webp",
@@ -21,7 +24,10 @@ export default {
             sostenible: false,
             sostenibleOnly: false,
             brand: 'Guess',
-            cardTitle: "Roses Tee"
+            cardTitle: "Roses Tee",
+            normalPrice: 20.99,
+            discountedPrice: 29.99,
+            price: ""
         },
         {
             img: "../../public/3.webp",
@@ -31,7 +37,10 @@ export default {
             sostenible: false,
             sostenibleOnly: false,
             brand: 'Come zucchero filato',
-            cardTitle: "Voglia di colori pastello"
+            cardTitle: "Voglia di colori pastello",
+            normalPrice: 180.99,
+            discountedPrice: 125.99,
+            price: ""
         },
         {
             img: "../../public/4.webp",
@@ -41,7 +50,10 @@ export default {
             sostenible: true,
             sostenibleOnly: false,
             brand: "Levi's",
-            cardTitle: "Tee unisex"
+            cardTitle: "Tee unisex",
+            normalPrice: 45.99,
+            discountedPrice: 24.99,
+            price: ""
         },
         {
             img: "../../public/5.webp",
@@ -51,7 +63,10 @@ export default {
             sostenible: false,
             sostenibleOnly: false,
             brand: 'Maya Deluxe',
-            cardTitle: "Stripe Bodice"
+            cardTitle: "Stripe Bodice",
+            normalPrice: 102.99,
+            discountedPrice: 49.99,
+            price: ""
         },
         {
             img: "../../public/6.webp",
@@ -61,7 +76,10 @@ export default {
             sostenible: false,
             sostenibleOnly: true,
             brand: 'Esprit',
-            cardTitle: "Maglione - Black"
+            cardTitle: "Maglione - Black",
+            normalPrice: 35.99,
+            discountedPrice: 29.99,
+            price: ""
         },
       ],
     }
@@ -70,7 +88,7 @@ export default {
 </script>
 
 <template>
-    <section>
+    <section class="card-section">
         <div class="container">
             <div class="row">
                 <div class="col-4"
@@ -113,8 +131,8 @@ export default {
                                 <div class="card__header">
                                     <h2> {{ card.cardTitle }} </h2>
                                         <div class="card__price">
-                                            <span class="red__price">14,99&euro;</span>
-                                            <span class="black__price">29,99&euro;</span>
+                                            <span class="red__price">{{ card.discountedPrice }}&euro;</span>
+                                            <span class="black__price"> {{ card.normalPrice }} &euro;</span>
                                         </div>
                                 </div>
                             </div>
