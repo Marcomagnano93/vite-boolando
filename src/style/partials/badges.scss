@@ -3,33 +3,28 @@
     z-index: 50;
     position: absolute;
     padding: 2px 4px;
+    top: 75%;
 }
 
 
 
 .discount {
-    
     background-color: red;
     color: white;
     display: inline-block;
-    top: 75%;
     left: 0;
 }
 
-.sostenibile {
-    
+.tag {
     background-color: green;
     color: white;
-    top: 75%;
     left: 20%;
 
 }
 
-.sostenibile__only {
-    
+.sostenibile__only {  
     background-color: green;
     color: white;
-    top: 75%;
     left: 0;
 }
 
@@ -41,7 +36,7 @@
     display: inline-block;
     top: 2%;
     right: 0;
-    padding: 12px;
+    padding: 0 8px;
     display: flex;
     justify-content: center;
     align-items: center;

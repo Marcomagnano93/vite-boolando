@@ -1,11 +1,15 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import CardsSection from './components/CardsSection.vue'
+import CardsSection from './components/CardsSection.vue';
+import Footer from './components/Footer.vue';
+
 
 export default{
   components: {
     AppHeader,
-    CardsSection
+    CardsSection,
+    Footer
+
   }
 }
 
@@ -21,6 +25,11 @@ export default{
   <main>
     <CardsSection/>
   </main>
+
+  <!-- section footer -->
+
+    <Footer />
+  
 </template>
 
 <style lang="scss">

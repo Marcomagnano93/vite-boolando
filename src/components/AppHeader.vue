@@ -1,13 +1,35 @@
 <script>
-
+export default {
+  data() {
+    return {
+      shopCategories: [
+        {
+            folder: 'Donna',
+            href: '#'
+        },
+        {
+            folder: 'Uomo',
+            href: '#'
+        },
+        {
+            folder: 'Bambino',
+            href: '#'
+        }
+      ],
+    }
+  }
+}
 </script>
 
 <template>
 <nav class="row navbar">
                 <ul class="col-4 link-list">
-                    <li><a href="#">Donna</a></li>
-                    <li><a href="#">Uomo</a></li>
-                    <li><a href="#">Babini</a></li>
+                    <li
+                    v-for="(link, i) in shopCategories" :key="i"
+                    >
+                    <a :href="link.href"> {{ link.folder }} </a>
+                    </li>
+                    
                 </ul>
 
                 <div class="col-4 flx-center">
@@ -29,7 +51,7 @@
     display: flex;
     justify-content: space-between;
     background-color: orange;
-    // position: fixed;
+    position: fixed;
     width: 100%;
     z-index: 999;
     box-shadow: 0px 0px 20px 2px rgba(0, 0, 0.1);
