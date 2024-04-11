@@ -40,33 +40,19 @@ export default {
             </div>
             <div class="badges">
                 <div 
-                v-if="badgesProps[0].type === 'discount'"
-                class="badge"
-                :class="badgesProps[0].type"
+                    v-if="badgesProps[0].type === 'discount' || badgesProps[0].type === 'tag'"
+                    class="badge"
+                    :class="badgesProps[0].type"
                 >
                     {{ badgesProps[0].value }}
                 </div>
 
                 <div
-                v-if="badgesProps.length === 2 && badgesProps[1].type === 'discount'"
-                class="badge"
-                :class="badgesProps[1].type"
+                    v-if="badgesProps.length === 2 && badgesProps[1].type === 'discount' || badgesProps[1].type === 'tag'"
+                    class="badge"
+                    :class="badgesProps[1].type"
                 >
                     {{ badgesProps[1].value }}
-                </div>
-
-                <div 
-                v-if="badgesProps.length === 2 && badgesProps[0].type === 'tag'"
-                class="badge"
-                :class="badgesProps[0].type"
-                >
-                    {{ badgesProps[0].value }}
-                </div>
-
-                <div 
-                v-if="badgesProps.length === 1 && badgesProps[0].type === 'tag'"
-                class="badge sostenibile__only">                     
-                    {{ badgesProps[0].value }}
                 </div>
             </div>
 
