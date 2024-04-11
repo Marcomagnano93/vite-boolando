@@ -23,9 +23,7 @@ export default {
 
 <template>
     <div class="card">
-        <div class="card__product"
-        @click="addRemoveFavorite(isInFavoritesProps[i])"
-        >
+        <div class="card__product">
             <div>  
                 <img :src="frontImageProps" alt="">
 
@@ -38,6 +36,7 @@ export default {
             :class="isInFavoritesProps === true? 'red': ''">
                 <a href="">&hearts;</a>
             </div>
+            
             <div class="badges">
                 <div 
                     v-if="badgesProps[0].type === 'discount' || badgesProps[0].type === 'tag'"
