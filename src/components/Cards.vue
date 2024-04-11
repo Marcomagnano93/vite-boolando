@@ -48,7 +48,7 @@ export default {
                 </div>
 
                 <div
-                    v-if="badgesProps.length === 2 && badgesProps[1].type === 'discount' || badgesProps[1].type === 'tag'"
+                    v-if="badgesProps.length === 2 && badgesProps[1].type === 'discount'"
                     class="badge"
                     :class="badgesProps[1].type"
                 >
