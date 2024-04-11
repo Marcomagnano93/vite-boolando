@@ -16,14 +16,16 @@ export default {
             const discounter = (price * discount) / 100;
             const finalPrice = price - discounter;
             return finalPrice.toFixed(2)
-        }
+        },
     }
 }
 </script>
 
 <template>
     <div class="card">
-        <div class="card__product">
+        <div class="card__product"
+        @click="addRemoveFavorite(isInFavoritesProps[i])"
+        >
             <div>  
                 <img :src="frontImageProps" alt="">
 
@@ -32,38 +34,40 @@ export default {
                 </div>
             </div>                           
 
-            <div class="like">
+            <div class="like"
+            :class="isInFavoritesProps === true? 'red': ''">
                 <a href="">&hearts;</a>
             </div>
+            <div class="badges">
+                <div 
+                v-if="badgesProps[0].type === 'discount'"
+                class="badge"
+                :class="badgesProps[0].type"
+                >
+                    {{ badgesProps[0].value }}
+                </div>
 
-            <div 
-            v-if="badgesProps[0].type === 'discount'"
-            class="badge"
-            :class="badgesProps[0].type"
-            >
-                 {{ badgesProps[0].value }}
-            </div>
+                <div
+                v-if="badgesProps.length === 2 && badgesProps[1].type === 'discount'"
+                class="badge"
+                :class="badgesProps[1].type"
+                >
+                    {{ badgesProps[1].value }}
+                </div>
 
-            <div
-            v-if="badgesProps.length === 2 && badgesProps[1].type === 'discount'"
-            class="badge"
-            :class="badgesProps[1].type"
-            >
-                 {{ badgesProps[1].value }}
-            </div>
+                <div 
+                v-if="badgesProps.length === 2 && badgesProps[0].type === 'tag'"
+                class="badge"
+                :class="badgesProps[0].type"
+                >
+                    {{ badgesProps[0].value }}
+                </div>
 
-            <div 
-            v-if="badgesProps.length === 2 && badgesProps[0].type === 'tag'"
-            class="badge"
-            :class="badgesProps[0].type"
-            >
-                {{ badgesProps[0].value }}
-            </div>
-
-            <div 
-            v-if="badgesProps.length === 1 && badgesProps[0].type === 'tag'"
-            class="badge sostenibile__only">                     
-                {{ badgesProps[0].value }}
+                <div 
+                v-if="badgesProps.length === 1 && badgesProps[0].type === 'tag'"
+                class="badge sostenibile__only">                     
+                    {{ badgesProps[0].value }}
+                </div>
             </div>
 
             <div class="card__caption">

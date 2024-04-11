@@ -1,31 +1,39 @@
 .badge {
     line-height: 22px;
-    z-index: 50;
-    position: absolute;
     padding: 2px 4px;
-    top: 75%;
+    z-index: 50;
+    
 }
 
+.badges {
+    position: absolute;
+    top: 75%;
+    display: flex;
+    gap: 16px   
+}
 
+.red {
+    color: red !important;
+}
 
 .discount {
     background-color: red;
     color: white;
     display: inline-block;
-    left: 0;
+   
 }
 
 .tag {
     background-color: green;
     color: white;
-    left: 20%;
+    
 
 }
 
 .sostenibile__only {  
     background-color: green;
     color: white;
-    left: 0;
+    
 }
 
 .like {
