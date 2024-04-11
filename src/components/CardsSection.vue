@@ -28,7 +28,8 @@ export default {
                     :nameProps="product.name" 
                     :priceProps="product.price"
                     :isInFavoritesProps="product.isInFavorites"
-                    :badgesProps="product.badges"                />
+                    :badgesProps="product.badges"                
+                />
 
             </div>       
         </div>

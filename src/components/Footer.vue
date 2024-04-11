@@ -89,7 +89,7 @@ h4 {
     gap: 12px;
 }
 
-.flx>li {
+.flx li {
     font-size: 12px;
 }
  
