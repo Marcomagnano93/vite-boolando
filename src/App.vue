@@ -16,9 +16,7 @@ export default{
   methods: {
     funzioneAxios(){
       axios.get('http://localhost:3000/products').then((res) => {
-
         store.productsStore = res.data
-
       })
     }   
   }

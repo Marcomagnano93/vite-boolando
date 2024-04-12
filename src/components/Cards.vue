@@ -16,7 +16,7 @@ export default {
             const discounter = (price * discount) / 100;
             const finalPrice = price - discounter;
             return finalPrice.toFixed(2)
-        },
+        }
     }
 }
 </script>
