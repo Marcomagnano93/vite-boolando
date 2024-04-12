@@ -1,11 +1,12 @@
 <script>
 import Cards from './Cards.vue';
-import dataProducts from '../assets/db.json';
+
+import { store } from '../store.js';
 
 export default {
   data() {
     return {
-        products: dataProducts.products,
+        products: store.productsStore,
     }
   },
   components: {
@@ -19,8 +20,10 @@ export default {
     <section class="card-section">
         <div class="container">
             <div class="row">
-                <cards class="col-4"
-                    v-for="product in products" :key="product.id"
+                <div class="col-4"
+                v-for="product in products" :key="product.id"
+                >
+                    <cards                    
                     :idProps="product.id"
                     :frontImageProps="product.frontImage"
                     :backImageProps="product.backImage"
@@ -28,9 +31,9 @@ export default {
                     :nameProps="product.name" 
                     :priceProps="product.price"
                     :isInFavoritesProps="product.isInFavorites"
-                    :badgesProps="product.badges"                
-                />
-
+                    :badgesProps="product.badges"
+                    />
+                </div>
             </div>       
         </div>
     </section>

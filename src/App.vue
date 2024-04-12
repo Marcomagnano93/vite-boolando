@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import CardsSection from './components/CardsSection.vue';
 import Footer from './components/Footer.vue';
+import axios from 'axios';
 
 
 export default{
@@ -10,6 +11,13 @@ export default{
     CardsSection,
     Footer
 
+  },
+  methods: {
+    funzioneAxios(){
+      axios.get('').then((res) => {
+        
+      })
+    }   
   }
 }
 

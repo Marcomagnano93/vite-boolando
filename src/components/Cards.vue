@@ -1,4 +1,6 @@
 <script>
+
+
 export default {
     props: {
         idProps: Number,

@@ -1,21 +1,10 @@
 <script>
+import { store } from '../store.js';
+
 export default {
   data() {
     return {
-      links: [
-        {
-            page: 'Informazioni Legali',
-            href: '#'
-        },
-        {
-            page: 'Informativa sulla privacy',
-            href: '#'
-        },
-        {
-            page: 'Diritto di recesso',
-            href: '#'
-        }
-      ],
+        footerLinks: store.links
     }
   }
 }
@@ -38,7 +27,7 @@ export default {
                 <div class="col-6">
                     <ul class="flx">
                         <li
-                        v-for="(link, i) in  links" :key="i"
+                        v-for="(link, i) in  footerLinks" :key="i"
                         ><a :href="link.href">
 
                             {{ link.page }}
