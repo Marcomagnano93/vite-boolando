@@ -33,27 +33,20 @@ export default {
             </div>                           
 
             <div class="like"
+
             :class="isInFavoritesProps === true? 'red': ''">
                 <a href="">&hearts;</a>
             </div>
             
-            <div class="badges">
-                <div 
-                    v-if="badgesProps[0].type === 'discount' || badgesProps[0].type === 'tag'"
-                    class="badge"
-                    :class="badgesProps[0].type"
+            <ul class="badges">
+                <li
+                class="badge"
+                v-for="(badge, i) in badgesProps" :key="i"
+                :class="badge.type"
                 >
-                    {{ badgesProps[0].value }}
-                </div>
-
-                <div
-                    v-if="badgesProps.length === 2 && badgesProps[1].type === 'discount'"
-                    class="badge"
-                    :class="badgesProps[1].type"
-                >
-                    {{ badgesProps[1].value }}
-                </div>
-            </div>
+                    {{ badge.value }}
+                </li>
+            </ul>
 
             <div class="card__caption">
                 <p class="caption"> {{ brandProps }} </p>
