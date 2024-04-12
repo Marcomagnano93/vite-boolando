@@ -1,5 +1,5 @@
 import { reactive } from 'vue';
-import dataProducts from './db.json';
+import dataProducts from '../db.json';
 
 export const store = reactive({
     links: [

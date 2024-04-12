@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader.vue';
 import CardsSection from './components/CardsSection.vue';
 import Footer from './components/Footer.vue';
 import axios from 'axios';
+import { store } from './store';
 
 
 export default{
@@ -14,8 +15,10 @@ export default{
   },
   methods: {
     funzioneAxios(){
-      axios.get('').then((res) => {
-        
+      axios.get('http://localhost:3000/products').then((res) => {
+
+        store.productsStore = res.data
+
       })
     }   
   }
