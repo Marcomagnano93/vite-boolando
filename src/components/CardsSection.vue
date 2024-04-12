@@ -20,7 +20,7 @@ export default {
         <div class="container">
             <div class="row">
                 <cards class="col-4"
-                    v-for="(product, i) in products" :key="i"
+                    v-for="product in products" :key="product.id"
                     :idProps="product.id"
                     :frontImageProps="product.frontImage"
                     :backImageProps="product.backImage"

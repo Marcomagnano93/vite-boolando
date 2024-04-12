@@ -25,10 +25,10 @@ export default {
     <div class="card">
         <div class="card__product">
             <div>  
-                <img :src="frontImageProps" alt="">
+                <img :src="'/' + frontImageProps" alt="">
 
                 <div class="hover">
-                    <img :src="backImageProps" alt="">
+                    <img :src="'/' + backImageProps" alt="">
                 </div>
             </div>                           
 
