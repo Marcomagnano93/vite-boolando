@@ -1,7 +1,7 @@
 <script>
 export default {
     props: {
-        idProps: Number,
+        idProps: String,
         frontImageProps: String,
         backImageProps: String,
         brandProps: String,
