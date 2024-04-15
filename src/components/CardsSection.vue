@@ -6,7 +6,7 @@ import { store } from '../store.js';
 export default {
   data() {
     return {
-        products: store.productsStore,
+        store: store,
     }
   },
   components: {
@@ -21,7 +21,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-4"
-                v-for="product in products" :key="product.id"
+                v-for="(product, i) in store.productsStore" :key="i"
                 >
                     <cards                    
                     :idProps="product.id"
