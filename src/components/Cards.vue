@@ -34,7 +34,9 @@ export default {
 
             <div class="like"
 
-            :class="isInFavoritesProps === true? 'red': ''">
+            :class="{
+                favorite: isInFavoritesProps
+            }">
                 <a href="">&hearts;</a>
             </div>
             
